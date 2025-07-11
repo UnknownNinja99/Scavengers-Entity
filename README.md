@@ -41,17 +41,67 @@ Entity combines multiple powerful security tools into a single, user-friendly in
 
 ## 🛠️ Installation
 
+### Quick Start (Recommended)
+
+#### For Termux (Android):
+```bash
+git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
+cd Scavengers-Entity
+chmod +x install.sh
+./install.sh
+```
+
+#### For Linux/macOS:
+```bash
+git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
+cd Scavengers-Entity
+chmod +x install.sh
+./install.sh
+```
+
+#### For Windows:
+```cmd
+git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
+cd Scavengers-Entity
+install.bat
+```
+
+### Manual Installation
+
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/YOUR_USERNAME/Entity.git
-    cd Entity
+    git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
+    cd Scavengers-Entity
     ```
 
 2.  **Install the required dependencies:**
-    Make sure you have Python 3 installed. Then, run the following command to install all necessary libraries from the `requirements.txt` file.
+    Make sure you have Python 3.7+ installed. Then run:
     ```bash
     pip install -r requirements.txt
     ```
+
+3.  **Run Entity:**
+    ```bash
+    python main.py
+    ```
+
+### 📱 Termux Specific Setup
+For Android users using Termux:
+```bash
+# Update packages first
+pkg update && pkg upgrade
+
+# Install Python and Git
+pkg install python git
+
+# Clone and install Entity
+git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
+cd Scavengers-Entity
+pip install -r requirements.txt
+
+# Run Entity
+python main.py
+```
 
 ---
 
@@ -66,6 +116,51 @@ python main.py
 You will be greeted with the main menu, where you can choose from the available modules.
 
 ---
+
+## 📚 Documentation
+
+- **[QUICKSTART.md](QUICKSTART.md)** - Fast setup and basic usage
+- **[SETUP.md](SETUP.md)** - Detailed installation guide for all platforms
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - How to contribute to the project
+
+## 🚀 Quick Usage
+
+After installation, simply run:
+```bash
+python main.py
+```
+
+Or use the launcher scripts:
+- Linux/macOS/Termux: `./entity.sh`
+- Windows: `entity.bat`
+
+## 🎯 Example Usage
+
+### Safe Testing Targets
+- **scanme.nmap.org** - Official Nmap test server
+- **testphp.vulnweb.com** - Vulnerable web application for testing
+- **Your own servers/devices** - Always the safest option
+
+### Sample Commands
+1. **Vulnerability Scan:** Select option 1, enter target IP/domain
+2. **IP Geolocation:** Select option 2, enter IP address
+3. **OSINT Investigation:** Select option 3, choose investigation type
+4. **Phishing Detection:** Select option 4, enter suspicious URL
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## 📝 License
+
+This project is open source. Use responsibly and ethically.
+
+## 🔗 Links
+
+- **GitHub Repository:** [https://github.com/UnknownNinja99/Scavengers-Entity](https://github.com/UnknownNinja99/Scavengers-Entity)
+- **Issues & Bug Reports:** [GitHub Issues](https://github.com/UnknownNinja99/Scavengers-Entity/issues)
 
 ## ⚖️ Disclaimer
 
