@@ -1,6 +1,6 @@
 # Entity - Advanced Security Toolkit
 
-![Entity Banner](https://art.text-image.com/image/univers/e/Entity.png)
+![Entity Toolkit Screenshot](screenshot.png)
 
 **Entity v1.0** by **Blue Scavengers Security** is a comprehensive, command-line cybersecurity toolkit designed for educational purposes, security professionals, and ethical hackers in Python.
 
@@ -69,4 +69,4 @@ You will be greeted with the main menu, where you can choose from the available 
 
 ## ⚖️ Disclaimer
 
-This tool is intended for educational and authorized security testing purposes **only**. The author is not responsible for any misuse or damage caused by this program. Always obtain explicit permission before scanning any target you do not own. **Act ethically and
+This tool is intended for educational and authorized security testing purposes **only**. The author is not responsible for any misuse or damage caused by this program. Always obtain explicit permission before scanning any target you do not own. **Act ethically and responsibly.**
