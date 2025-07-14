@@ -1,6 +1,6 @@
 # Termux-specific requirements.txt
 # Core packages that work well in Termux
-requests==2.32.3
+requests==2.32.4
 rich==14.0.0
 python-dateutil==2.9.0.post0
 urllib3==2.2.2
