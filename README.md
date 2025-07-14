@@ -5,6 +5,7 @@
 [![Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/UnknownNinja99/Scavengers-Entity)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS%20%7C%20Termux-lightgrey.svg)](https://github.com/UnknownNinja99/Scavengers-Entity)
 [![Python](https://img.shields.io/badge/python-3.7%2B-blue.svg)](https://python.org)
+[![Security](https://img.shields.io/badge/security-policy%20enabled-brightgreen.svg)](SECURITY.md)
 [![License](https://img.shields.io/badge/license-Open%20Source-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-Production%20Ready-brightgreen.svg)](https://github.com/UnknownNinja99/Scavengers-Entity)
 
