@@ -227,7 +227,10 @@ def vulnerability_scanner():
                     redirect_resp = requests.get(redirect_test_url, allow_redirects=False, timeout=5)
                     if redirect_resp.status_code in [301, 302, 303, 307, 308]:
                         location = redirect_resp.headers.get("Location", "")
-                        if "evil.com" in location:
+                        # Fixed: More secure URL validation to prevent bypasses
+                        from urllib.parse import urlparse
+                        parsed_location = urlparse(location)
+                        if parsed_location.netloc == "evil.com" or parsed_location.netloc.endswith(".evil.com"):
                             console.print("[bold red]Possible Open Redirect vulnerability detected![/bold red]")
                             console.print("[yellow]Risk: Open redirects can be abused for phishing or malware delivery.[/yellow]")
 
@@ -258,7 +261,13 @@ def vulnerability_scanner():
         elif choice == '3':
             target = console.input("[bold green]Enter the target domain (no http/https): [/bold green]")
             try:
+                # Fixed: Use secure SSL context with modern TLS versions only
                 context = ssl.create_default_context()
+                context.check_hostname = True
+                context.verify_mode = ssl.CERT_REQUIRED
+                # Disable weak protocols
+                context.options |= ssl.OP_NO_SSLv2 | ssl.OP_NO_SSLv3 | ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1
+                
                 with socket.create_connection((target, 443), timeout=5) as sock:
                     with context.wrap_socket(sock, server_hostname=target) as ssock:
                         cert = ssock.getpeercert()
