@@ -3,7 +3,7 @@
 requests==2.32.3
 rich==14.0.0
 python-dateutil==2.9.0.post0
-urllib3==2.2.2
+urllib3==2.5.0
 phonenumbers==8.13.36
 python-whois==0.9.5
 pyfiglet==1.0.3
