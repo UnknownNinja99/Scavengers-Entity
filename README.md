@@ -47,32 +47,60 @@ Entity combines multiple powerful security tools into a single, user-friendly in
 
 ## 🛠️ Installation
 
-### Quick Start (Recommended)
+Entity supports **all major platforms** with tested, optimized installation procedures:
 
-#### For Termux (Android):
-```bash
-git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
-cd Scavengers-Entity
-chmod +x install.sh
-./install.sh
-```
-
-#### For Linux/macOS:
-```bash
-git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
-cd Scavengers-Entity
-chmod +x install.sh
-./install.sh
-```
-
-#### For Windows:
+### 🖥️ Windows
 ```cmd
 git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
 cd Scavengers-Entity
 install.bat
+# OR manual: pip install -r requirements.txt && python main.py
 ```
 
-### Manual Installation
+### 🐧 Linux (Ubuntu/Debian/Kali)
+```bash
+git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
+cd Scavengers-Entity
+
+# Modern Linux (recommended - uses virtual environment)
+chmod +x install-linux.sh
+./install-linux.sh
+
+# OR manual with virtual environment
+python3 -m venv entity-env
+source entity-env/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+📖 **Detailed guide:** [LINUX-INSTALL.md](LINUX-INSTALL.md)
+
+### 📱 Termux (Android)
+```bash
+pkg update && pkg upgrade
+pkg install python git
+git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
+cd Scavengers-Entity
+
+# Use Termux-optimized installer
+chmod +x termux-fix.sh
+./termux-fix.sh
+
+# OR manual installation
+pip install -r requirements-termux.txt
+python main.py
+```
+📖 **Detailed guide:** [TERMUX-INSTALL.md](TERMUX-INSTALL.md)
+
+### ✅ Platform Compatibility
+
+| Platform | Status | Installation Method | Notes |
+|----------|--------|-------------------|-------|
+| 🖥️ **Windows** | ✅ Fully Supported | `install.bat` or pip | Native support |
+| 🐧 **Linux** | ✅ Fully Supported | Virtual environment | Modern distributions |
+| 📱 **Termux** | ✅ Fully Supported | Termux-optimized packages | Android compatible |
+| 🍎 **macOS** | ✅ Should Work | Standard pip install | Not extensively tested |
+
+### Manual Installation (All Platforms)
 
 1.  **Clone the repository:**
     ```bash
@@ -90,15 +118,6 @@ install.bat
     ```bash
     python main.py
     ```
-
-### 📱 Termux Specific Setup
-For Android users using Termux:
-```bash
-# Update packages first
-pkg update && pkg upgrade
-
-# Install Python and Git
-pkg install python git
 
 # Clone and install Entity
 git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
