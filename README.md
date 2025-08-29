@@ -76,6 +76,9 @@ pip install requests rich phonenumbers python-whois pyfiglet
 
 # Run Entity
 python main.py
+
+# 🚀 For future runs, use the easy launcher:
+chmod +x run-entity.sh && ./run-entity.sh
 ```
 📖 **Detailed guide:** [LINUX-INSTALL.md](LINUX-INSTALL.md)
 

@@ -37,14 +37,34 @@ python main.py
 
 ---
 
-## 🔄 **For Future Sessions**
+## � **Running Entity (After Installation)**
 
-To run Entity after installation:
+### **Method 1: Easy Launcher (Recommended)**
+```bash
+cd Scavengers-Entity
+chmod +x run-entity.sh
+./run-entity.sh
+```
+*The launcher script automatically handles virtual environment activation!*
+
+### **Method 2: Manual Activation**
 ```bash
 cd Scavengers-Entity
 source entity-env/bin/activate  # Activate virtual environment
-python main.py
+python main.py                  # Run Entity
+deactivate                      # Deactivate when done (optional)
 ```
+
+---
+
+## 💡 **Pro Tips**
+
+### **Create an Alias (Optional)**
+Add this to your `~/.bashrc` for even easier access:
+```bash
+alias entity='cd ~/Scavengers-Entity && source entity-env/bin/activate && python main.py'
+```
+Then just type `entity` from anywhere!
 pip install requests rich phonenumbers python-whois pyfiglet
 
 # Run Entity
