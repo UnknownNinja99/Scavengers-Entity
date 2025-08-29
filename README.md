@@ -60,17 +60,21 @@ install.bat
 
 ### 🐧 Linux (Ubuntu/Debian/Kali)
 ```bash
+apt install git
+apt install python3
 git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
 cd Scavengers-Entity
 
-# Modern Linux (recommended - uses virtual environment)
-chmod +x install-linux.sh
-./install-linux.sh
-
-# OR manual with virtual environment
+# Create a virtual environment for Entity
 python3 -m venv entity-env
+
+# Activate it
 source entity-env/bin/activate
-pip install -r requirements.txt
+
+# Install packages (now it will work!)
+pip install requests rich phonenumbers python-whois pyfiglet
+
+# Run Entity
 python main.py
 ```
 📖 **Detailed guide:** [LINUX-INSTALL.md](LINUX-INSTALL.md)
@@ -78,16 +82,11 @@ python main.py
 ### 📱 Termux (Android)
 ```bash
 pkg update && pkg upgrade
-pkg install python git
+pkg install git
+pkg install python
 git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
 cd Scavengers-Entity
-
-# Use Termux-optimized installer
-chmod +x termux-fix.sh
-./termux-fix.sh
-
-# OR manual installation
-pip install -r requirements-termux.txt
+python3 -m pip install requests rich phonenumbers python-whois pyfiglet
 python main.py
 ```
 📖 **Detailed guide:** [TERMUX-INSTALL.md](TERMUX-INSTALL.md)

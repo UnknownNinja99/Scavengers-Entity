@@ -1,33 +1,48 @@
 # 🚀 Termux Installation Guide for Entity
 
-## 📱 **Quick Fix for Current Issue**
+## 📱 **Complete Fresh Installation (Recommended)**
 
-If you're getting the `evdev` error, here's the immediate solution:
-
-### **Step 1: Use Termux-Specific Requirements**
+### **Step 1: Update Termux and Install Dependencies**
 ```bash
-# In your current Scavengers-Entity directory
-# NOTE: Make sure to type "phonenumbers" (with 's') not "phonenumber"
-pip install --upgrade pip
-pip install requests
-pip install rich
-pip install python-dateutil
-pip install urllib3
-pip install phonenumbers
-pip install python-whois
-pip install pyfiglet
+pkg update && pkg upgrade
 ```
 
-### **Step 2: Test Entity**
+### **Step 2: Install Required Packages**
+```bash
+pkg install git
+pkg install python
+```
+
+### **Step 3: Clone Entity Repository**
+```bash
+git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
+cd Scavengers-Entity
+```
+
+### **Step 4: Install Python Dependencies**
+```bash
+python3 -m pip install requests rich phonenumbers python-whois pyfiglet
+```
+
+### **Step 5: Run Entity**
 ```bash
 python main.py
 ```
 
-## 🛠️ **Complete Fresh Installation**
+---
 
-### **Method 1: Use Updated Repository**
+## � **Troubleshooting**
+
+### **If you get 'evdev' errors:**
+Entity automatically skips problematic packages in Termux. The core functionality works without them.
+
+### **If pip installation fails:**
 ```bash
-# Remove old installation if needed
+# Upgrade pip first
+python3 -m pip install --upgrade pip
+# Then retry the installation
+python3 -m pip install requests rich phonenumbers python-whois pyfiglet
+```
 rm -rf Scavengers-Entity
 
 # Fresh clone

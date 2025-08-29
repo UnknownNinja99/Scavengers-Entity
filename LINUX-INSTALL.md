@@ -1,33 +1,50 @@
 # 🐧 Linux Installation Guide for Entity
 
-## 🚀 **Quick Installation (Recommended)**
+## 🚀 **Complete Installation for Kali Linux / Ubuntu / Debian**
 
-### **✅ Method 1: Automated Script**
+### **Step 1: Install System Dependencies**
 ```bash
-# Clone the repository
-git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
-cd Scavengers-Entity
-
-# Run the optimized Linux installer
-chmod +x install-linux.sh
-./install-linux.sh
-
-# Entity is ready! 🎉
+apt install git
+apt install python3
 ```
 
-### **🛠️ Method 2: Manual Installation (Tested & Verified)**
+### **Step 2: Clone Entity Repository**
 ```bash
-# Clone the repository
 git clone https://github.com/UnknownNinja99/Scavengers-Entity.git
 cd Scavengers-Entity
+```
 
-# Create virtual environment
+### **Step 3: Create Virtual Environment (Recommended)**
+```bash
+# Create a virtual environment for Entity
 python3 -m venv entity-env
 
-# Activate virtual environment
+# Activate it
 source entity-env/bin/activate
+```
 
-# Install packages
+### **Step 4: Install Python Dependencies**
+```bash
+# Install packages (now it will work!)
+pip install requests rich phonenumbers python-whois pyfiglet
+```
+
+### **Step 5: Run Entity**
+```bash
+# Run Entity
+python main.py
+```
+
+---
+
+## 🔄 **For Future Sessions**
+
+To run Entity after installation:
+```bash
+cd Scavengers-Entity
+source entity-env/bin/activate  # Activate virtual environment
+python main.py
+```
 pip install requests rich phonenumbers python-whois pyfiglet
 
 # Run Entity
