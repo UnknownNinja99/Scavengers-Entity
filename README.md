@@ -1,48 +1,53 @@
-# Entity - Advanced Security Toolkit
+# Entity - Cybersecurity Learning Toolkit
 
 ![Entity Toolkit Screenshot](screenshot.png)
 
-[![Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/UnknownNinja99/Scavengers-Entity)
+[![Version](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/UnknownNinja99/Scavengers-Entity)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS%20%7C%20Termux-lightgrey.svg)](https://github.com/UnknownNinja99/Scavengers-Entity)
 [![Python](https://img.shields.io/badge/python-3.7%2B-blue.svg)](https://python.org)
-[![Security](https://img.shields.io/badge/security-policy%20enabled-brightgreen.svg)](SECURITY.md)
-[![License](https://img.shields.io/badge/license-Open%20Source-green.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/status-Production%20Ready-brightgreen.svg)](https://github.com/UnknownNinja99/Scavengers-Entity)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Educational](https://img.shields.io/badge/purpose-educational-orange.svg)](https://github.com/UnknownNinja99/Scavengers-Entity)
+[![Student Project](https://img.shields.io/badge/student-project-purple.svg)](https://education.github.com)
 
-**Entity v1.0** by **Blue Scavengers Security** is a comprehensive, command-line cybersecurity toolkit designed for educational purposes, security professionals, and ethical hackers in Python.
+Entity is a Python-based cybersecurity toolkit I built to learn about network security, OSINT techniques, and ethical hacking. This project started as a learning exercise and evolved into a full-featured security assessment tool.
+
+**What I learned building this:**
+- Network programming and socket handling
+- Multi-threaded port scanning algorithms
+- API integration for OSINT data gathering
+- Security best practices and vulnerability assessment
+- Building modular, maintainable code
 
 ---
 
 ## 🚀 Features
 
-Entity combines multiple powerful security tools into a single, user-friendly interface.
+Built this toolkit from scratch to understand how security tools work under the hood. Each feature taught me something new about cybersecurity.
 
-### 1. 🔍 Vulnerability Scanner
-- **Multi-threaded Port Scanning**: Quickly discover open ports on a target.
-- **Banner Grabbing**: Identify services running on open ports.
-- **Web Vulnerability Analysis**: Check for missing security headers, directory listing, and basic SQLi/XSS vulnerabilities.
-- **SSL/TLS Certificate Analysis**: Inspect SSL certificates for expiration, weak algorithms, and misconfigurations.
-- **Directory & File Enumeration**: Discover common sensitive directories and files.
+### 1. 🔍 Network Vulnerability Scanner
+- **Enhanced Port Scanning**: Multi-threaded scanning with support for 43+ service types (way better than my first version that only recognized 13!)
+- **Smart Banner Grabbing**: Protocol-aware detection - learned the hard way that HTTP requests don't work on SMB ports
+- **Service Fingerprinting**: Identifies RPC, NetBIOS, SMB, VMware services, and more
+- **Vulnerability Assessment**: Flags common security issues like EternalBlue, weak encryption, open relays
+- **Custom Port Ranges**: Scan specific ports or full ranges (1-65535)
 
-### 2. 🕵️ OSINT (Open Source Intelligence) Suite
-- **Social Media OSINT**: Check for a username's presence across major social media platforms.
-- **Domain/IP Intelligence**: Gather detailed information on domains and IP addresses.
-- **Phone Number Intelligence**: Analyze phone numbers to find the country, carrier, and type.
-- **Email Investigation**: Gather intelligence on an email address and its domain.
-- **Username Search**: Perform a broad search for a username across dozens of platforms.
-- **Automatic Data Breach Check**: Check if an email has been exposed in known data breaches using the HaveIBeenPwned API.
-- **WHOIS Lookup**: Perform a detailed WHOIS lookup on any domain.
+### 2. 🕵️ OSINT Investigation Tools
+- **Username Search**: Check username availability across 50+ social platforms
+- **Email Intelligence**: Domain analysis, breach checking via HaveIBeenPwned API
+- **Phone Number Analysis**: Carrier lookup, country identification, number type detection
+- **WHOIS Lookup**: Domain registration info, nameservers, creation dates
+- **Social Media OSINT**: Find social profiles linked to usernames or emails
 
-### 3. 🛡️ Phishing Page Detector
-- **URL Analysis**: Scans URLs for suspicious keywords, excessive length, and other structural red flags.
-- **Domain Analysis**: Checks domain age and reputation.
-- **Risk Scoring**: Provides an overall risk score to determine the likelihood of a phishing attempt.
-- **Bulk Analysis**: Analyze a list of URLs at once.
+### 3. 🛡️ Phishing Detection
+- **URL Risk Analysis**: Checks for suspicious patterns, homograph attacks, URL shorteners
+- **Domain Reputation**: Flags newly registered domains (common phishing tactic)
+- **Security Headers**: Verifies if sites use proper HTTPS and security headers
+- **Risk Scoring System**: Calculates overall threat level with detailed breakdown
 
-### 4. 🌍 IP Geolocation & Analysis
-- **IP Geolocation**: Track the geographical location of public IP addresses.
-- **Private IP Handling**: Intelligently identifies private IPs and provides local network context.
-- **Bulk IP Analysis**: Analyze multiple IP addresses in a single run.
+### 4. 🌍 IP Geolocation
+- **Location Tracking**: Geographic data for any public IP address
+- **ISP Detection**: Identifies internet service providers
+- **Local Network Handling**: Smart detection of private IP ranges (192.168.x.x, 10.x.x.x, etc.)
 
 ---
 
@@ -135,13 +140,13 @@ python main.py
 
 ## 🖥️ Usage
 
-To run the toolkit, simply execute the `main.py` script:
+Run the main script and navigate through the interactive menu:
 
 ```bash
-python main.py
+python entity_v2.py
 ```
 
-You will be greeted with the main menu, where you can choose from the available modules.
+The interface is pretty intuitive - just follow the prompts. I designed it to be beginner-friendly since I was a beginner when I started this project!
 
 ---
 
@@ -162,34 +167,83 @@ Or use the launcher scripts:
 - Linux/macOS/Termux: `./entity.sh`
 - Windows: `entity.bat`
 
-## 🎯 Example Usage
+## 🎯 Testing the Toolkit
 
-### Safe Testing Targets
-- **scanme.nmap.org** - Official Nmap test server
-- **testphp.vulnweb.com** - Vulnerable web application for testing
-- **Your own servers/devices** - Always the safest option
+### Legal & Safe Testing
+**IMPORTANT:** Only scan systems you own or have explicit permission to test. Unauthorized scanning is illegal.
 
-### Sample Commands
-1. **Vulnerability Scan:** Select option 1, enter target IP/domain
-2. **IP Geolocation:** Select option 2, enter IP address
-3. **OSINT Investigation:** Select option 3, choose investigation type
-4. **Phishing Detection:** Select option 4, enter suspicious URL
+**Safe targets for practice:**
+- `scanme.nmap.org` - Nmap's official test server
+- `testphp.vulnweb.com` - Intentionally vulnerable site
+- Your own local network (192.168.x.x)
+- Your own VPS or cloud instances
+
+### Quick Examples
+```bash
+# Port scan your local machine
+1 → Network Scanner → Quick Scan → localhost
+
+# Check if an email was in data breaches  
+3 → OSINT Suite → Email Intelligence → test@example.com
+
+# Analyze a suspicious URL
+4 → Phishing Detector → Enter URL
+
+# Geolocate an IP
+2 → IP Geolocation → 8.8.8.8
+```
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+This started as a solo learning project, but I'd love to see what others can add! Whether it's bug fixes, new features, or documentation improvements - all contributions are welcome.
+
+Check out [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get involved.
+
+## 🎓 Learning Resources
+
+If you're learning cybersecurity like me, these helped a lot:
+- **NetworkChuck** (YouTube) - Great networking tutorials
+- **The Cyber Mentor** - Ethical hacking courses
+- **OWASP Top 10** - Web security fundamentals
+- **Python Socket Programming** - Official Python docs
 
 ## 📝 License
 
-This project is open source. Use responsibly and ethically.
+MIT License - feel free to use this for learning, modify it, or build something better!
 
 ## 🔗 Links
 
 - **GitHub Repository:** [https://github.com/UnknownNinja99/Scavengers-Entity](https://github.com/UnknownNinja99/Scavengers-Entity)
 - **Issues & Bug Reports:** [GitHub Issues](https://github.com/UnknownNinja99/Scavengers-Entity/issues)
 
-## ⚖️ Disclaimer
+## ⚖️ Legal Disclaimer
 
-This tool is intended for educational and authorized security testing purposes **only**. The author is not responsible for any misuse or damage caused by this program. Always obtain explicit permission before scanning any target you do not own. **Act ethically and responsibly.**
+**READ THIS:** This toolkit is for learning and authorized testing only. I built it to understand cybersecurity concepts, not for malicious use.
+
+- ✅ Use on your own systems
+- ✅ Use with written permission
+- ✅ Use on designated practice targets (like scanme.nmap.org)
+- ❌ Don't scan random websites or networks
+- ❌ Don't use for unauthorized access
+- ❌ Don't be that person who ruins it for everyone
+
+Unauthorized port scanning and security testing can be illegal in your jurisdiction. I'm not responsible for misuse - use common sense and ethics.
+
+---
+
+## 🙏 Acknowledgments
+
+Built with help from:
+- The awesome open-source community
+- Various cybersecurity learning resources
+- Friends who tested early versions and gave honest feedback
+- Stack Overflow (let's be real, everyone uses it)
+
+## 📬 Contact
+
+- **GitHub Issues**: Best way to report bugs or suggest features
+- **Repository**: [Scavengers-Entity](https://github.com/UnknownNinja99/Scavengers-Entity)
+
+If this project helped you learn something new, consider giving it a star ⭐ - it motivates me to keep improving it!

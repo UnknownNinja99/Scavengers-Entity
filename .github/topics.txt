@@ -1,0 +1,53 @@
+# Recommended GitHub Topics for Entity Repository
+
+## Add these topics to your GitHub repository for better discoverability:
+
+### Primary Topics (Most Important)
+- cybersecurity
+- ethical-hacking
+- network-security
+- security-tools
+- penetration-testing
+- osint
+- python-security
+- student-project
+
+### Educational Focus
+- learning-project
+- cybersecurity-education
+- security-learning
+- beginner-friendly
+- educational-project
+
+### Technical Topics
+- port-scanner
+- network-scanner
+- vulnerability-scanner
+- python3
+- security-assessment
+- information-gathering
+
+### Platform Coverage
+- cross-platform
+- windows
+- linux
+- termux
+
+### Specific Features
+- phishing-detection
+- ip-geolocation
+- banner-grabbing
+- whois-lookup
+- social-media-osint
+
+## How to Add Topics:
+
+1. Go to your repository on GitHub
+2. Click "About" (top right, under the Code button)
+3. Click the gear icon ⚙️
+4. Add topics in the "Topics" field
+5. Choose 5-10 relevant topics (don't overdo it)
+
+## Recommended Combination (10 topics max):
+
+cybersecurity, ethical-hacking, network-security, security-tools, osint, python-security, student-project, port-scanner, educational-project, penetration-testing

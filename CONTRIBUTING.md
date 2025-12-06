@@ -1,32 +1,41 @@
-# Contributing to Entity Toolkit
+# Contributing to Entity
 
-Thank you for your interest in contributing to Entity! This document provides guidelines for contributing to the project.
+Thanks for considering contributing! This project started as a learning exercise, and I'm excited to see what the community can add to it.
 
-## 🤝 How to Contribute
+## How Can I Contribute?
 
-### Reporting Issues
-1. Check existing issues first
-2. Create a new issue with:
-   - Clear description of the problem
-   - Steps to reproduce
-   - Expected vs actual behavior
-   - Environment details (OS, Python version)
+### Reporting Bugs
+
+Found a bug? Please open an issue with:
+- A clear, descriptive title
+- Steps to reproduce the issue
+- Expected vs actual behavior
+- Your environment (OS, Python version)
+- Screenshots if relevant
 
 ### Suggesting Features
-1. Open an issue with the "enhancement" label
-2. Describe the feature and its use case
-3. Explain why it would be valuable
+
+Have an idea? Open an issue with the `enhancement` label and describe:
+- What problem it solves
+- How it would work
+- Why it would be useful for learning cybersecurity
 
 ### Code Contributions
 
-#### Setup Development Environment
-1. Fork the repository
-2. Clone your fork:
+#### Getting Started
+
+1. **Fork the repo** and clone your fork
    ```bash
-   git clone https://github.com/YOUR_USERNAME/Scavengers-Entity.git
+   git clone https://github.com/YOUR-USERNAME/Scavengers-Entity.git
    cd Scavengers-Entity
    ```
-3. Create a virtual environment:
+
+2. **Create a branch** for your feature
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. **Install dependencies**
    ```bash
    python -m venv dev-env
    source dev-env/bin/activate  # Linux/Mac
