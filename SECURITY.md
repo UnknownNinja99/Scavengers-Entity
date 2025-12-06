@@ -8,7 +8,7 @@ We take the security of Entity seriously. If you believe you have found a securi
 
 **Please do NOT report security vulnerabilities through public GitHub issues, discussions, or pull requests.**
 
-Instead, please send an email to: **[security@entity-project.com]** *(or create a private issue)*
+Instead, please send an email to: **[bluescavengerssec.podcast@gmail.com]** *(or create a private issue)*
 
 Include the following information:
 - Type of issue (buffer overflow, SQL injection, cross-site scripting, etc.)
@@ -76,7 +76,7 @@ We recognize security researchers who help improve Entity's security:
 
 ## 📞 Contact Information
 
-- **Security Email**: [Your security contact]
+- **Security Email**: [bluescavengersec.podcast@gmail.com]
 - **GitHub**: [@UnknownNinja99](https://github.com/UnknownNinja99)
 - **Project**: [Scavengers-Entity](https://github.com/UnknownNinja99/Scavengers-Entity)
 
